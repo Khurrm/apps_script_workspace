@@ -17,7 +17,21 @@ var headers = {
         "aw-tenant-code": TENANTCODE 
 }; 
 
+var data = {
+  "device_manufacturers": [
+    "Apple"
+  ],
+  "page": 1,
+  "page_size": 2
+};
 
+var options = {
+  'method' : 'post',
+  'contentType': 'application/json',
+  // Convert the JavaScript object to a JSON string.
+  "headers": headers,
+  'payload' : JSON.stringify(data)
+};
 
 
 }

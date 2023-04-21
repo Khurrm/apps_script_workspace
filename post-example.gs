@@ -33,5 +33,13 @@ var options = {
   'payload' : JSON.stringify(data)
 };
 
+Logger.log(options);
+var response = UrlFetchApp.fetch(url1,options);
+Logger.log(response); 
+
+var content = response.getContentText();
+var json = JSON.parse(content);
+Logger.log(json.total_results)
+
 
 }

@@ -15,4 +15,12 @@ var authHeader = "Basic " + Utilities.base64Encode(USERNAME + ':' + PASSWORD);
 var authy = "Basic " + authHeader;
 Logger.log(authy);
 
+var headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "Basic "+ authHeader ,
+        "aw-tenant-code": tenantcode
+     
+}; 
+
 }

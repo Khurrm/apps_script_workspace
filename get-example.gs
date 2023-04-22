@@ -9,12 +9,10 @@ var url = "https://XXXX.awmdm.com/API/mdm/devices/12345";
 var url1 = "https://XXXXX.awmdm.com/API/mdm/devices/search?user=XXXXX";
 //uuid is the ID of the Organization group
 var uuid ="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
-
 var contenttype = 'application/json';
-var authy = "Basic " + 'XXXXXXXXXXXXXXXXXXXXXXXXX';
-Logger.log(authy);
 
-//Base64 encoding of username and password for HTTP header
 var authHeader = "Basic " + Utilities.base64Encode(USERNAME + ':' + PASSWORD);
+var authy = "Basic " + authHeader;
+Logger.log(authy);
 
 }

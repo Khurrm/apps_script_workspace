@@ -26,6 +26,8 @@ var headers = {
 var options = {"method": "Get",
                  "headers": headers
                 };
-                 
+Logger.log(options);
+var response = UrlFetchApp.fetch(url,options);
+Logger.log(response);
 
 }

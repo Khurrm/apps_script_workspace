@@ -30,4 +30,14 @@ Logger.log(options);
 var response = UrlFetchApp.fetch(url,options);
 Logger.log(response);
 
+var content = response.getContentText();
+var json = JSON.parse(content);
+
+Logger.log(json.Total)
+Logger.log(json.Devices[0].SerialNumber)
+//Logger.log(json.Devices[1].SerialNumber)
+//Logger.log(json.Devices[2].SerialNumber)
+Logger.log(json.Devices[0].TimeZone)
+Logger.log(json.Devices[0].UserEmailAddress)
+
 }
